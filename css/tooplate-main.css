@@ -1,0 +1,589 @@
+
+
+/* @keyframes seq-preloader {
+  50% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+} */
+/* 
+.seq-preloader {
+  background: white;
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  z-index: 99999999;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.seq-preloader.seq-preloaded {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s .5s, opacity .5s;
+}
+
+.seq-preload-indicator {
+  overflow: visible;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.seq-preload-circle {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  fill: #7a7a7a;
+  opacity: 0;
+  animation: seq-preloader 1.25s infinite;
+}
+
+.seq-preload-circle-2 {
+  animation-delay: .15s;
+}
+
+.seq-preload-circle-3 {
+  animation-delay: .3s;
+}
+
+.seq-preload-indicator-fallback {
+  width: 42px;
+  overflow: visible;
+}
+
+.seq-preload-indicator-fallback .seq-preload-circle {
+  width: 8px;
+  height:8px;
+  background-color: #f4f4f4;
+  border-radius: 100%;
+  opacity: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.seq-preload-indicator-fallback .seq-preload-circle-2 {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 12px;
+  height: 12px;
+}
+
+.seq-preload-indicator-fallback .seq-preload-circle-3 {
+  width: 16px;
+  height: 16px;
+} */
+
+
+/* MAIN CSS */
+/* 
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+}
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+  }
+}
+@-webkit-keyframes fillColour {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #333;
+  }
+}
+@keyframes fillColour {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #333;
+  }
+} */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+	overflow: scroll;
+}
+
+body {
+  overflow: hidden;
+  font-size: 100%;
+}
+ul,ol{
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+
+}
+.logo{
+  background-color: #faf5b2;
+  width: 15vw;
+  height: 15%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.logo h1{
+  font-size: 26px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.earth-nav{
+  background: rgba(0, 0, 0, 0.75);
+  width: 85vw;
+  height: 90vh;
+  position: fixed;
+  top: 15%;
+  left: 15vw;
+  z-index: 9999;
+}
+.earth-nav ul{
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.earth-nav ul>li{
+  width: 130px;
+  height: 70px;
+  margin: 10px auto;
+  line-height: 70px;
+}
+.earth-nav ul>li a{ 
+  color: #fff;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.earth-nav ul>li img{ 
+  display: block;
+  margin: 20px auto -16px auto;
+  width: 25px;
+}
+
+/*---------------------------------------- start slides---------------------------------- */
+.slides{
+  /* width: 5384px; */
+  width: 400vw;
+  height: 100vh;
+  position: relative;
+  overflow: scroll;
+}
+.slides .slide{
+  width: 100vw;
+  height: 100vh;
+  float: left;
+  display: inline-block;
+  background-size: 100% 100%;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+.slides .slide-one{
+  left: 0;
+}
+/* -----------------------------------------slide two with its content---------------------------------------- */
+.slides .slide-two{
+  background-image: url(../images/about-bg.jpg);
+  position: absolute;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.slides .slide-two .list-tabs{
+  position: relative;
+  width: 80%;
+  height: 80%;
+  left: 20%;
+  top: 15%;
+  /* overflow: scroll; */
+}
+.slides .slide-two .list-tabs .three-tabs{
+  width: 16%;
+  float: left;
+  display: inline-block;
+}
+.slides .slide-two .list-tabs .three-tabs ul li{
+  display: block;
+  margin: 0 0 30px;
+}
+.slides .slide-two .list-tabs .three-tabs ul li>a{
+  display: block;
+  color: #fff;
+  font-size: 38px;
+  border: 4px solid #ffff;
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 80px;
+}
+.slides .slide-two .list-tabs .three-tabs ul li>a.active{
+  color: #333;
+  background: #faf5b2;
+  border: 4px solid #faf5b2;
+ 
+}
+
+
+.slides .slide-two .list-tabs .three-contents{
+  width: 62%;
+  float: left;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+.slides .slide-two .list-tabs .three-contents .all{
+  display: none;
+}
+.slides .slide-two .list-tabs .three-contents .active{
+  display: block;
+  height:260px
+}
+/* .slides .slide-two .list-tabs .three-contents .all{
+  display: none;
+  } */
+
+/* ------------------------------------start slide three------------------------------------- */
+.slides .slide-three{
+  background-image: url(../images/gallery-bg.jpg);
+  position: absolute;
+  left: 200vw;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.slides .slide-three .third-content{
+  width: 80%;
+  height: 80%;
+  position: relative;
+  left: 20%;
+  top: 20%;
+}
+.slides .slide-three .third-content .item-info{
+  color: #000;
+    background: #fff;
+    padding: 10px;
+    font-family: roboto-bold;
+}
+/* --------------------------------------start slide-four------------------------------------ */
+.slides .slide-four{
+  background-image: url(../images/contact-bg.jpg);
+  position: absolute;
+  left: 300vw;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.slides .slide-four .content-four{
+  position: relative;
+  width: 616px;
+  height: 349px;
+  top: 20%;
+  left: 37%;
+  background: rgba(0,0,0,0.7);
+  padding: 18px;
+}
+.slides .slide-four .content-four h2{
+  text-align: center;
+  color: #fff;
+  margin: 0 0 28px;
+  font-family: roboto-bold;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+.slides .slide-four .content-four .contact input,
+.slides .slide-four .content-four .contact textarea{
+  display: block;
+  width: 49%;
+  background: transparent;
+  text-indent: 4px;
+  border: 1px solid #fff;
+  outline: none;
+  height: 40px;
+  float: left;
+  margin: 10px 0;
+  color: #fff;
+  font-size: 17px;
+}
+.slides .slide-four .content-four .contact input::placeholder,
+.slides .slide-four .content-four .contact textarea::placeholder{
+  color: #fff;
+  font-size: 15px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+.slides .slide-four .content-four .contact input:first-child{
+  margin-right: 2%;
+}
+.slides .slide-four .content-four .contact textarea{
+  display: block;
+  width: 100%;
+  background: transparent;
+  text-indent: 4px;
+  border: 1px solid #fff;
+  outline: none;
+  height: 100px;
+}
+.slides .slide-four .content-four .contact input[type="submit"]{
+  display: block;
+  margin: 5px auto;
+  width: 200px;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  left: 50%;
+  position: relative;
+  transform: translateX(-50%);
+}
+
+
+/* .slides .slide-one{
+  background: url(../images/full-bg-01.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+} */
+.slides .slide .slide-wrap{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.slides .slide .img-slider{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.slides .img-slider ul{
+  margin-bottom: 0;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.slides .img-slider ul li{
+  float: left;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 100%;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.slides .img-slider ul li:nth-child(1){
+  background: url(../images/full-bg-01.jpg);
+  left: 0;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.slides .img-slider ul li:nth-child(2){
+  background: url(../images/full-bg-02.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.slides .img-slider ul li:nth-child(3){
+  background: url(../images/full-bg-03.jpg);
+  background-size: 100% 100%;
+  background-position: center center;
+}
+.slides .slide-one .img-thumbnail{
+  position: absolute;
+  z-index: 9999;
+  right: 20px;
+  bottom: 49px;
+  height: auto;
+  border: none;
+  background: transparent
+}
+.slides .slide-one .img-thumbnail>ul{
+  width: 486px;
+  background: transparent;
+}
+.slides .slide-one .img-thumbnail>ul li{
+    display: inline-block;
+    float: left;
+    width: 120px;
+    margin: 0 10px 0;
+   cursor: pointer;
+ }
+ .slides .slide-one .img-thumbnail>ul li img{
+    width: 100%;
+    display: inline-block;
+  }
+  .slides .slide-one .img-thumbnail>ul li.active-li{
+    border: 5px solid #faf5b2;
+  }
+  /*---------------------------------- formatting inside slides h6 h1------------------------------------ */
+  .slides .slide ul li .slide-caption{
+    position: absolute;
+    right: 30px;
+    width: 40%;
+    color: #fff;
+    height: 100vh;
+    text-align: right;
+    margin: 88px 62px 0 0px;
+  }
+  .slides .slide ul li .slide-caption h6{
+    font-family: roboto-bold;
+    letter-spacing: 1px;
+    font-size: 29px;
+  }
+  .slides .slide ul li .slide-caption h2{
+    font-size: 84px;
+    text-transform: capitalize; 
+    letter-spacing: 2px;
+    font-family: roboto-bold;
+  }
+  /* ###############################################start media query screens################################################## */
+  @media (max-width:991px){
+    .logo {
+      height: 106px;
+    }
+    .logo h1 {
+      line-height: 106px;
+    }
+    .earth-nav {
+      width: 85vw;
+      height: 106px;
+      top: 0;
+      /* left: 102px; */
+    }
+    .earth-nav ul {
+      width: 100%;
+      height: 100%;
+    }
+    .earth-nav ul > li {
+      width: 25%;
+      float: left;
+    }
+    .earth-nav ul > li a span{
+      display: none;
+    }
+    .slides .slide-one .img-thumbnail > ul li {
+      width: 78px;
+    }
+    .slides .slide-one .img-thumbnail{
+      width: 300px;
+    }
+    .slides .slide ul li .slide-caption{
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      margin:auto;
+    }
+    .slides .slide ul li .slide-caption h2 {
+      font-size: 61px;
+    }
+    /* ################################start slide two ################################ */
+    .slides .slide-two .list-tabs .three-tabs {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+      .slides .slide-two .list-tabs {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+      .slides .slide-two .list-tabs .three-tabs {
+        width: auto;
+        float: none;
+        /* display: inline-block; */
+    }
+      .slides .slide-two .list-tabs .three-tabs ul li {
+        display: inline-block;
+        float: left;
+        margin: 20px 20px 020px;
+    }
+    .slides .slide-two .list-tabs .three-contents {
+      width: 100%;
+     }
+     /* ################################start third slide############################# */
+     .slides .slide-three .third-content {
+      left: 10%;
+    }
+    /* ################################start fourth slide################################# */
+    .slides .slide-four .content-four {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+
+  }
+  @media (min-width:992px){
+    .earth-nav {
+      width: 15vw;
+      height: 90vh;
+      left: 0;
+  }
+  }
